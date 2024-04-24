@@ -1,0 +1,26 @@
+<div class="post card">
+    <header class="card-header">
+        <h2>{{post.title}}</h2>
+        <p>Posted by {{post.user.username}} on {{formatDate post.date_created}}</p>
+    </header>
+    <p class="card-body">{{post.content}}</p>
+</div>
+
+{{#each comments as |comment|}}
+<div class="comment">
+    <p>{{comment.content}}</p>
+    <p>-{{comment.user.username}}, {{formatDate comment.date_created}}</p>
+</div>
+{{/each}}
+
+<button id="editor-toggle-button">Add New Comment</button>
+
+<div id="new-comment-editor" style="display: none">
+    <form id="new-comment-form">
+        <label for="comment-input">Comment</label>
+        <input type="text" id="comment-input" />
+        <button type="submit">Add Comment</button>
+    </form>
+</div>
+
+<script src="/js/comment.js"></script>
