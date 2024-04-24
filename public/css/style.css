@@ -1,0 +1,141 @@
+/* Variables */
+:root {
+    --grey: #3B3C35;
+    --purple-grey: #38353C;
+    --white: #FFFFFF;
+    --yellow: #D7E639;
+    --red: #E64339;
+    --blue: #3992E6;
+}
+
+/* Overall stylings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: var(--grey);
+    /* Make all text slightly larger */
+    font-size: 120%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+body > header {
+    background-color: var(--yellow);
+    padding: 1em;
+}
+
+h1 {
+    color: var(--grey);
+}
+
+body > header > nav > * {
+    margin: 0 1em 0 0;
+    color: var(--grey);
+    text-decoration: none;
+}
+
+/* Main */
+main {
+    background-color: var(--grey);
+    color: var(--white);
+    height: 100%;
+    padding: 1em 2em;
+}
+
+main a {
+    color: var(--white);
+}
+
+/* Cards */
+.card {
+    border: solid 0.2em var(--yellow);
+    margin: 1em 0;
+}
+
+.card a {
+    text-decoration: underline;
+}
+
+.card > * {
+    padding: 0.5em;
+}
+
+.card-header {
+    width: 100%;
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header * {
+    color: var(--grey);
+}
+
+/* Buttons */
+button {
+    padding: 0.5em;
+    margin: 0;
+    border: 0;
+    border-radius: 0.2em;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 100%;
+    cursor: pointer;
+}
+
+.no-button {
+    background: none;
+    border: none;
+    padding: 0;
+    text-decoration: none;
+    font-size: 100%;
+}
+
+.post-button {
+    width: 100%;
+    background-color: var(--yellow);
+    color: var(--grey);
+    margin: 0 0 1em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#delete-button {
+    background-color: var(--red);
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-flow: column;
+    gap: 0.5em;
+}
+
+form > button,
+form + button {
+    margin: 0.5em 0;
+    padding: 0.5em;
+}
+
+input {
+    font-size: 100%;
+}
+
+/* Comments */
+.comment {
+    border: solid 0.2em var(--yellow);
+    margin: 0 0 1em 0;
+    padding: 0.5em;
+    color: var(--yellow);
+    display: flex;
+    justify-content: space-between;
+}
